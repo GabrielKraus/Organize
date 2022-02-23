@@ -1,0 +1,275 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.metasDiarias{
+    min-height: 80vh;
+}
+.metasDiarias h1{
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.metasDiarias .contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.metasDiarias .contenedor ul{
+    list-style: none;
+}
+.metasDiarias .contenedor ul .item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.metasDiarias .contenedor ul .item .horaminuto{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    margin-bottom: 0;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.metasDiarias .contenedor ul .item .elnombre{
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    margin-bottom: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+.metasDiarias .contenedor ul .item input{
+    width: 50px;
+    height: 20px
+}
+.metasDiarias .contenedor ul .item button{
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: max-content;
+    align-self: flex-end !important;
+}
+
+.metasDiarias .contenedor .todo-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.metasDiarias .contenedor .todo-form button{
+    margin-top: 10px;
+}
+.metasDiarias .contenedor .todo-form .nombres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.metasDiarias .contenedor .todo-form .horario input{
+    width: 40px;
+}
+
+
+@media (max-width: 990px){
+    .metasDiarias .contenedor{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.metasMensuales{
+    min-height: 80vh;
+}
+.metasMensuales h1{
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.metasMensuales .contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.metasMensuales .contenedor ul{
+    list-style: none;
+}
+.metasMensuales .contenedor ul .item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.metasMensuales .contenedor ul .item .horaminuto{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    margin-bottom: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.metasMensuales .contenedor ul .item .horaminutoDia{
+    border-left: 2px solid black;
+}
+
+.metasMensuales .contenedor ul .item .elnombre{
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    margin-bottom: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+.metasMensuales .contenedor ul .item input{
+    width: 50px;
+    height: 20px
+}
+.metasMensuales .contenedor ul .item button{
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: max-content;
+    align-self: flex-end !important;
+}
+
+.metasMensuales .contenedor .todo-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.metasMensuales .contenedor .todo-form button{
+    margin-top: 10px;
+}
+.metasMensuales .contenedor .todo-form .nombres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.metasMensuales .contenedor .todo-form .dia h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 990px){
+    .metasMensuales .contenedor{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+.finanzas{
+    min-height: 80vh;
+}
+
+.finanzas h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.finanzas .sueldo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.finanzas .sueldo #sueldoDisplay{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+.finanzas .sueldo #sueldoDisplay h2{
+    border: solid 2px black;
+    padding: 3px 25px;
+}
+
+
+
+.finanzas .sueldo #sueldoInputForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.finanzas .sueldo #sueldoInputForm label{
+    margin-right: 20px;
+}
+
+
+
+.finanzas .gastosYGanancias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.finanzas .gastosYGanancias #gastosYGananciasDisplay{
+    display: flex;
+    justify-content: center;
+}
+
+
+.finanzas .gastosYGanancias #gastosYGananciasoInputForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+/* .finanzas .gastosYGanancias #gastosYGananciasoInputForm #gastoGananciaSelect{
+    max-width: 100px;
+} */
+.finanzas .gastosYGanancias #gastosYGananciasoInputForm .selectYBoton{
+    width: 250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.finanzas .gastosYGanancias #gastosYGananciasoInputForm #gastosYGananciasNombre{
+    max-width: 250px
+}
+
+.finanzas .gastosYGanancias #gastosYGananciasoInputForm .gastoGananciaValor #gastoGananciaValorNumeral{
+    width: 200px;
+}
+
+.finanzas .gastosYGanancias #gastosYGananciasoInputForm .gastoGananciaValor #gastoGananciaSelect{
+    width: 50px;
+}
+
+.finanzas .gastosYGanancias #gastosYGananciasDisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.totalBorrarGastos{
+    display: grid;
+    grid-template-columns: 125px 125px;
+}
+
+.totalBorrarGastos #montoTotal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
