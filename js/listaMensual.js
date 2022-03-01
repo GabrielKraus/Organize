@@ -1,6 +1,6 @@
 class Item {
-    constructor(nombre, dia, diaNombre) {
-        this.id = Date.now();
+    constructor(id, nombre, dia, diaNombre) {
+        this.id = id;
         this.nombre = nombre;
         this.dia = dia;
         this.diaNombre = diaNombre;
@@ -23,7 +23,30 @@ function agregarItem() {
     const todoInputValue = document.querySelector('.todo-input').value;
     const diaInput = document.querySelector(".dia-input").value;
     const diaNombre = document.querySelector(".diaNombre-input").value;
-    items.push(new Item(todoInputValue, diaInput, diaNombre))
+    const idValue = Date.now();
+    items.push(new Item(idValue, todoInputValue, diaInput, diaNombre))
+
+    let item = document.createElement("li")
+    item.className = `item`
+    item.setAttribute("id", idValue);
+    item.innerHTML = `<input class="checkbox" type="checkbox"><p class="horaminuto horaminutoDia" >${diaInput}</p><p class="horaminuto" >${diaNombre}</p> <p class="elnombre">${todoInputValue}</p><button class="delete-button" onclick="borrarItem(${idValue}); history.go(0);">X</button>`
+    todoItemsList.append(item);
+
+    Toastify({
+        text: "Nueva Meta mensual Agregada!",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
     agregarLocalStorage()
 }
 function borrarItem(numId) {
