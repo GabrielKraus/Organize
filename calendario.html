@@ -13,15 +13,15 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid d-flex justify-content-between align-content-between">
-            <a class="navbar-brand" href="#">Organize</a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Organize</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link"  href="./index.html">Inicio</a>
+                    <a class="nav-link" href="./index.html">Inicio</a>
                     <a class="nav-link" href="./finanzas.html">Finanzas</a>
                     <a class="nav-link" href="./metasdiarias.html">Metas Diarias</a>
                     <a class="nav-link" href="./metasmensuales.html">Metas Mensuales</a>
@@ -44,9 +44,10 @@
                 </div>
                 <div class="dateBox">
                     <p>Fecha</p>
-                    <input type="number" id="dia" placeholder="DD"> / <input type="number" id="mes" placeholder="M"> / <input type="number" id="ano" placeholder="AAAA">
+                    <input type="number" class="dateInput" id="dia" placeholder="DD"> / <input type="number" class="dateInput" id="mes" placeholder="MM"> /
+                    <input type="number" class="dateInput" id="ano" placeholder="AAAA">
                 </div>
-                <input type="submit"  id="boton" onclick="history.go(0)">
+                <input type="submit" id="boton" onclick="history.go(0)">
             </div>
 
         </div>
@@ -58,11 +59,14 @@
         <div class="container">
             <footer class="py-3 my-4">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Finanzas</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Metas Diarias</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Metas Mensuales</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Calendario</a></li>
+                    <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-muted">Inicio</a></li>
+                    <li class="nav-item"><a href="./finanzas.html" class="nav-link px-2 text-muted">Finanzas</a></li>
+                    <li class="nav-item"><a href="./metasdiarias.html" class="nav-link px-2 text-muted">Metas
+                            Diarias</a></li>
+                    <li class="nav-item"><a href="./metasmensuales.html" class="nav-link px-2 text-muted">Metas
+                            Mensuales</a></li>
+                    <li class="nav-item"><a href="./calendario.html" class="nav-link px-2 text-muted">Calendario</a>
+                    </li>
                 </ul>
                 <p class="text-center text-muted">© 2022 Organize, Inc</p>
             </footer>

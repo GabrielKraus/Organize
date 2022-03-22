@@ -170,6 +170,10 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+    .dia{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -224,55 +228,81 @@
 
 .finanzas .gastosYGanancias #gastosYGananciasDisplay{
     display: flex;
-    justify-content: center;
-}
-
-
-.finanzas .gastosYGanancias #gastosYGananciasoInputForm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-}
-/* .finanzas .gastosYGanancias #gastosYGananciasoInputForm #gastoGananciaSelect{
-    max-width: 100px;
-} */
-.finanzas .gastosYGanancias #gastosYGananciasoInputForm .selectYBoton{
-    width: 250px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.finanzas .gastosYGanancias #gastosYGananciasoInputForm #gastosYGananciasNombre{
-    max-width: 250px
-}
-
-.finanzas .gastosYGanancias #gastosYGananciasoInputForm .gastoGananciaValor #gastoGananciaValorNumeral{
-    width: 200px;
-}
-
-.finanzas .gastosYGanancias #gastosYGananciasoInputForm .gastoGananciaValor #gastoGananciaSelect{
-    width: 50px;
-}
-
-.finanzas .gastosYGanancias #gastosYGananciasDisplay{
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+#gastosYGananciasoInputForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.valorDivisaTexto{
+    font-size: 20px;
+}
+.gastoGananciaValor{
+    display: flex
+}
+#gastoGananciaAgregar{
+    margin-top: 20px;
+    width: 30%;
+
+}
 .totalBorrarGastos{
-    display: grid;
-    grid-template-columns: 125px 125px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.rest{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}
+#gastosYGananciasoInputForm h4{
+    margin: 0;
+    padding: 0;
 }
 
-.totalBorrarGastos #montoTotal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+#borrarGastos{
+    width: 30%;
+    margin-top: 15px;
 }
+
+
+@media (max-width: 990px){
+    .finanzasMainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .finanzasMainContainer .sueldo{
+        grid-template-columns: 1fr
+    }
+    .finanzasMainContainer .sueldo #sueldoDisplay{
+        padding: 0;
+    }
+    .finanzasMainContainer .gastosYGanancias{
+        margin-top: 50px;
+        grid-template-columns: 1fr
+    }
+
+    .gastoGananciaValor{
+        display: grid;
+        grid-template-areas: "valor valor"
+                            "select1 select2";
+    }
+    #gastoGananciaValorNumeral{
+        grid-area: valor;
+    }
+    #divisaSelect{
+        grid-area: select1;
+    }
+    #gastoGananciaSelect{
+        grid-area: select2;
+    }
+}
+
 
 
 #calendario{
@@ -394,4 +424,40 @@
 }
 .today .cld-number.eventday:hover{
     background: #888;
+}
+
+
+.agregarAlCalendario{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.agregarAlCalendario p{
+    font-size: 20px;
+}
+.calendarioForm{
+    display: flex;
+}
+.descBox {
+    margin-right: 20px;
+}
+.dateBox{
+    margin-right: 20px;
+}
+
+.dateInput{
+    width: 50px;
+}
+
+.calendarioForm #boton{
+    height: 30px;
+    align-self: end;
+}
+
+@media (max-width: 990px){
+    .calendarioForm{
+        flex-direction: column;
+    }
 }
