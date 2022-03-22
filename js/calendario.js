@@ -331,12 +331,12 @@ var settings = {
 
 // // libreria de https://github.com/jackducasse/caleandar/tree/master/js 
 
-let defaultDate = {'Date': new Date(1, 1, 1), 'Title': 'nonde', 'Link': function(){console.log('Reminder!');}}
+let defaultDate = '[{"desc":"default","dia":"1","mes":"1","ano":"2000"}]'
 
 if (localStorage.getItem("fechas") == null) {
     localStorage.setItem('fechas', defaultDate);
-} else {
-    var eventos = JSON.parse(localStorage.getItem("fechas"))
+}
+var eventos = JSON.parse(localStorage.getItem("fechas"))
     let boton = document.getElementById("boton").addEventListener("click", agregarFecha)
 
 
@@ -370,7 +370,6 @@ if (localStorage.getItem("fechas") == null) {
     }
 
     caleandar(document.getElementById('calendario'), events, settings);
-}
 
 
 
