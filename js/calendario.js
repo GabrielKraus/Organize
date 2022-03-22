@@ -331,9 +331,10 @@ var settings = {
 
 // // libreria de https://github.com/jackducasse/caleandar/tree/master/js 
 
+let defaultDate = {'Date': new Date(1, 1, 1), 'Title': 'nonde', 'Link': function(){console.log('Reminder!');}}
 
 if (localStorage.getItem("fechas") == null) {
-    localStorage.setItem('fechas', "[{'Date': new Date(2016, 6, 1), 'Title': 'Doctor appointment at 3:25pm.', 'Link': function(){console.log('Reminder!');}}]");
+    localStorage.setItem('fechas', defaultDate);
 } else {
     var eventos = JSON.parse(localStorage.getItem("fechas"))
     let boton = document.getElementById("boton").addEventListener("click", agregarFecha)
