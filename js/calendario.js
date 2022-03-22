@@ -333,7 +333,7 @@ var settings = {
 
 
 if (localStorage.getItem("fechas") == null) {
-    localStorage.setItem('fechas', "[]");
+    localStorage.setItem('fechas', "[{'Date': new Date(2016, 6, 1), 'Title': 'Doctor appointment at 3:25pm.', 'Link': function(){console.log('Reminder!');}}]");
 } else {
     var eventos = JSON.parse(localStorage.getItem("fechas"))
     let boton = document.getElementById("boton").addEventListener("click", agregarFecha)
