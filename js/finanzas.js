@@ -1,6 +1,6 @@
-// if (localStorage.getItem("sueldo") == null) {
-//     localStorage.setItem("sueldo", 0);
-// }
+if (localStorage.getItem("sueldo") == null) {
+    localStorage.setItem("sueldo", "0");
+}
 
 
 fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
